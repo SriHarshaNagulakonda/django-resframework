@@ -2,7 +2,7 @@ from django.urls import path
 from .views import *
 
 urlpatterns=[
-    path('article/',article_list),
-    path('article/<int:pk>',article_detail)
+    path('article/',ArticleAPIView.as_view()),
+    path('article/<int:id>',ArticleDetails.as_view())
 ]
 
